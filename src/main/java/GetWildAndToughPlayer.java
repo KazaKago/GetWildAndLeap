@@ -11,10 +11,14 @@ class GetWildAndToughPlayer {
     GetWildAndToughPlayer() {
         basicPlayer = new BasicPlayer();
         try {
-            basicPlayer.open(getClass().getClassLoader().getResource("sounds/getwild.mp3"));
+            basicPlayer.open(getClass().getClassLoader().getResource("getwild.mp3"));
         } catch (BasicPlayerException e) {
-            e.printStackTrace();
+            throw new GetWildAndToughException();
         }
+    }
+
+    int status() {
+        return basicPlayer.getStatus();
     }
 
     void play() {
@@ -23,7 +27,7 @@ class GetWildAndToughPlayer {
                 basicPlayer.play();
             }
         } catch (BasicPlayerException e) {
-            e.printStackTrace();
+            throw new GetWildAndToughException();
         }
     }
 
@@ -31,7 +35,7 @@ class GetWildAndToughPlayer {
         try {
             basicPlayer.resume();
         } catch (BasicPlayerException e) {
-            e.printStackTrace();
+            throw new GetWildAndToughException();
         }
     }
 
@@ -39,12 +43,16 @@ class GetWildAndToughPlayer {
         try {
             basicPlayer.pause();
         } catch (BasicPlayerException e) {
-            e.printStackTrace();
+            throw new GetWildAndToughException();
         }
     }
 
     void stop() {
-        throw new GetWildAndToughException();
+        try {
+            basicPlayer.stop();
+        } catch (BasicPlayerException e) {
+            throw new GetWildAndToughException();
+        }
     }
 
 }
