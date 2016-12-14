@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GetWildAndLeap.iml" filepath="$PROJECT_DIR$/.idea/modules/GetWildAndLeap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GetWildAndLeap_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GetWildAndLeap_main.iml" group="GetWildAndLeap" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GetWildAndLeap_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GetWildAndLeap_test.iml" group="GetWildAndLeap" />
+    </modules>
+  </component>
+</project>
