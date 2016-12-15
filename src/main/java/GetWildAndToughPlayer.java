@@ -1,9 +1,6 @@
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
-/**
- * Created by tamura_k on 2016/12/14.
- */
 class GetWildAndToughPlayer {
 
     private BasicPlayer basicPlayer;
@@ -12,6 +9,7 @@ class GetWildAndToughPlayer {
         basicPlayer = new BasicPlayer();
         try {
             basicPlayer.open(getClass().getClassLoader().getResource("getwild.mp3"));
+            if (status() != BasicPlayer.OPENED) throw new GetWildAndToughException();
         } catch (BasicPlayerException e) {
             throw new GetWildAndToughException();
         }
